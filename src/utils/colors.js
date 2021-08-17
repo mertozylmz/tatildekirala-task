@@ -1,0 +1,1 @@
+export const gray = "#5c5c5c"
