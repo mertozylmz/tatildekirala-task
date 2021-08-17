@@ -5,11 +5,6 @@ import { check, request, PERMISSIONS, RESULTS, openSettings } from 'react-native
 const PHOTO_LIBRARY = Platform.OS == "android" ? PERMISSIONS.ANDROID.READ_EXTERNAL_STORAGE : PERMISSIONS.IOS.PHOTO_LIBRARY
 
 const usePhotoPermission = () => {
-    const statusCheck = (response, callback) => {
-        console.log(response)
-        
-    }
-
     const checkPermission = (callback) => {
         check(PHOTO_LIBRARY).then(response => {
             if (response == RESULTS.DENIED) {
